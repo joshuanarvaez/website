@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaBars, FaLinkedin, FaLinkedinIn, FaGithub, FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom"
-import { social } from "../data";
 import logo from '../logo.jpg';
 
 
@@ -41,18 +40,7 @@ const Navbar = () => {
                         <Link to="/contact">Contact</Link>
                         <Link to="/portfolio">Portfolio</Link>
                     </div>
-                </div>
-                <ul className="social-icons">
-                    {/* Pull social links array from data.js and map*/}
-                    {social.map((socialIcon) => {
-                        const { id, url, icon } = socialIcon
-                        return (
-                            <li key={id}>
-                                <a href={url}>{icon}</a>
-                            </li>
-                        )
-                    })}
-                </ul>
+                </div>   
             </div>
         </nav>
     )
