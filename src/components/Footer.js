@@ -1,7 +1,43 @@
+// import React from 'react';
+// import { social } from "../data";
+// import { MDBFooter } from 'mdb-react-ui-kit';
+
+// const Footer = () => {
+//   return (
+//     < MDBFooter className='bg-light text-center text-white fixed-bottom'>
+//       <footer>
+//         <div className="social-links-container">
+//           <ul className="social-icons">
+//             {social.map((socialIcon) => {
+//               const { id, url, icon } = socialIcon
+//               return (
+//                 <li key={id}>
+//                   <a href={url}>{icon}</a>
+//                 </li>
+//               )
+//             })}
+//           </ul>
+//         </div>
+//         <div className='text-center p-1' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+//           © 2020 Copyright:
+//           <p className='text-white' href='https://mdbootstrap.com/'>
+//             MDBootstrap.com
+//           </p>
+//         </div>
+//       </footer>
+//     </MDBFooter>
+//   );
+// }
+// export default Footer;
+
+
+
+// ****** OPTION 2 ***********
+
 import React from 'react';
 import {MDBFooter, MDBIcon } from 'mdb-react-ui-kit';
 
-export const Footer = () => {
+const Footer = () => {
   return (<MDBFooter className='bg-light text-center text-white fixed-bottom'>
     <footer> 
   <div className='container p-4 pb-0'>
@@ -9,12 +45,12 @@ export const Footer = () => {
       <a
         className='btn btn-primary btn-floating m-1'
         style={{ backgroundColor: '#55acee' }}
-        href='https://twitter.com'
+        href='https://twitter.com/JTrainV2'
         role='button'
         target="_blank"
         rel="noreferrer"
       >
-        <MDBIcon fab icon='twitter' />
+        <MDBIcon className='icons' fab icon='twitter' />
       </a>
 
       <a
@@ -25,7 +61,7 @@ export const Footer = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <MDBIcon fab icon='linkedin-in' />
+        <MDBIcon className='icons' fab icon='linkedin-in' />
       </a>
 
       <a
@@ -36,11 +72,10 @@ export const Footer = () => {
         rel="noreferrer"
         role='button'
       >
-        <MDBIcon fab icon='github' />
+        <MDBIcon className='icons' fab icon='github' />
       </a>
     </section>
   </div>
-
   <div className='text-center p-1' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
     © 2020 Copyright:
     <p className='text-white' href='https://mdbootstrap.com/'>
@@ -51,22 +86,11 @@ export const Footer = () => {
 </MDBFooter>
 );
 }
+export default Footer;
 
 // Option 2, uncomment the following and import social from data.js
 
-{/* Pull social links array from data.js and map*/}
+{/* Pull social links array from data.js and map*/ }
 
-{/* <ul className="social-icons">
-                    {social.map((socialIcon) => {
-                        const { id, url, icon } = socialIcon
-                        return (
-                            <li key={id}>
-                                <a href={url}>{icon}</a>
-                            </li>
-                        )
-                    })}
-                </ul> */}
-
-// import { social } from "../data";
 
 

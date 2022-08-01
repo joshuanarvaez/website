@@ -1,7 +1,12 @@
-export default function Portfolio () {
+
+
+
+
+const Portfolio = () => {
     return (
-        <h2>
-        Portfolio Page
+        <h2 className='h2test'>
+           portfolio page.
         </h2>
     );
 }
+export default Portfolio;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom"
-import logo from '../logo.jpg';
+import logo1 from '../logo1.jpg';
 
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav>
             <div className="nav-center">
                 <div className="nav-header">
-                    <img src={logo} classname="logo" alt="logo" />
+                    <img src={logo1} classname="logo" alt="logo" />
                     <button className="nav-toggle" onClick={toggleLinks}>
                         <FaBars />
                     </button>

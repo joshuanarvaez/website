@@ -1,6 +1,80 @@
-export default function About() {
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+
+const About = () => {
     return (
-        <body>
+        <div className="section-cards">
+            <div className="soft-skills-card">
+                <Card style={{ width: '18.5rem' }}>
+                    <Card.Body>
+                        <Card.Title>Soft Skills</Card.Title>
+                        <ListGroup variant="flush">
+                            <ListGroup.Item>Verbal & Written Communication</ListGroup.Item>
+                            <ListGroup.Item>People & Interpersonal Skills</ListGroup.Item>
+                            <ListGroup.Item>Professionalism</ListGroup.Item>
+                            <ListGroup.Item>Adaptability</ListGroup.Item>
+                            <ListGroup.Item>Problem Solving & Critical Thinking</ListGroup.Item>
+                            <ListGroup.Item>Teamwork</ListGroup.Item>
+                            <ListGroup.Item>Leadership</ListGroup.Item>
+                            <ListGroup.Item>Self-Awareness</ListGroup.Item>
+                            <ListGroup.Item>Self-Learning</ListGroup.Item>
+                            <ListGroup.Item>Time Management</ListGroup.Item>
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+            </div>
+            <div className="professional-interests-card">
+            <Card style={{ width: '18rem' }}>
+                    <Card.Body>
+                        <Card.Title>Professional Interests</Card.Title>
+                        <ListGroup variant="flush">
+                            <ListGroup.Item>UI/UX Design</ListGroup.Item>
+                            <ListGroup.Item>Full Stack Development</ListGroup.Item>
+                            <ListGroup.Item>Video Game Design & Development</ListGroup.Item>
+                            <ListGroup.Item>Internet of Things</ListGroup.Item>
+                            <ListGroup.Item>Blockchain & Web3</ListGroup.Item>
+                            <ListGroup.Item>Artificial Intelligence</ListGroup.Item>
+                            <ListGroup.Item>Cloud Computing</ListGroup.Item>
+                            <ListGroup.Item>Robotics</ListGroup.Item>
+                            <ListGroup.Item>Strategy</ListGroup.Item>
+                            <Button className='cv-button' href="https://standardresume.co/r/YknRSFGKufmU5vUbSsiXn" target="_blank" variant="outline-info">resume</Button>
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+            </div>
+            <div className="personal-interests-card">
+                <Card style={{ width: '18rem' }}>
+                    <Card.Body>
+                        <Card.Title>Personal Interests</Card.Title>
+                        <ListGroup variant="flush">
+                            <ListGroup.Item>Fitness</ListGroup.Item>
+                            <ListGroup.Item>Traveling</ListGroup.Item>
+                            <ListGroup.Item>Golf</ListGroup.Item>
+                            <ListGroup.Item>DIY Projects</ListGroup.Item>
+                            <ListGroup.Item>Outdoors</ListGroup.Item>
+                            <ListGroup.Item>Food</ListGroup.Item>
+                            <ListGroup.Item>Music</ListGroup.Item>
+                            <ListGroup.Item>Halo Infinite</ListGroup.Item>
+                            <ListGroup.Item>Watching TV</ListGroup.Item>
+                            <ListGroup.Item>Anything Tech</ListGroup.Item>
+                            <ListGroup.Item>Caffeine</ListGroup.Item>
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+            </div>
+            
+
+        </div>
+    );
+}
+export default About;
+
+
+
+
+{/* <body>
             <main>
                 <h1 className="about-heading">My Interests:</h1>
             <section className="activities">
@@ -51,9 +125,4 @@ export default function About() {
                 </div>
             </section>
             </main>
-            </body>
-
-
-    );
-}
-
+            </body> */}
