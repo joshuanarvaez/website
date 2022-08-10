@@ -1,105 +1,130 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { React } from 'react';
 import { send } from 'emailjs-com';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-import { formControlClasses } from '@mui/material';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Field, Form, Formik } from "formik";
+import { object, string } from "yup";
+import { TextField, Button, Box, Typography, } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import '../styles/contact.css'
+import ColorTheme from './ColorTheme'
 
-// here we make API calls to EmailJS so we can receive the messages in our personal email.
+
 const Contact = () => {
-    const { reset } = useForm();
 
-    const [form, setForm] = useState({
+    const initialValues = {
         name: '',
         subject: '',
         email: '',
         message: '',
-    });
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-        send(
-            'service_u3zbtht',
-            'wubh2gi',
-            form,
-            '8ycExG0NQqJ39HJc4'
-        )
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            })
-            .catch((err) => {
-                console.log('FAILED...', err);
-            })
     };
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-        reset();
-    };
-
     
 
+    /* Yup allows us to build a validation schema for our form. Formik library allows us to get values in and out
+        of the form state and handle the form submission. Easier than useState. */
     return (
+        <div className="contact-container">
+        <p className="contact-intro">
+        Contact me with any questions you might have!
+        </p>
         <div className="contact-form">
-            <Card style={{ width: '35rem' }}>
-                <Card.Body>
-                    <Form onSubmit={onSubmit}>
-                        <Form.Group className="mb-2" controlId="formBasicName">
-                            <Form.Label id="form-heading">Contact Me</Form.Label>
-                            <Form.Control type="text" name="name" placeholder="Your name" value={formControlClasses.name} onChange={handleChange} />
-                        </Form.Group>
-                        <Form.Group className="mb-2" controlId="formBasicSubject">
-                            <Form.Control id="subject-text-box" type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} />
-                        </Form.Group>
-                        <Form.Group className="mb-2" controlId="formBasicEmail">
-                            <Form.Control id="email-text-box" type="text" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} />
-                        </Form.Group>
-                        <Form.Group className="mb-1" controlId="formBasicMessage">
-                            <Form.Control as="textarea" rows={5} id="message-text-box" type="text" name="message" placeholder="Message" value={form.message} onChange={handleChange} />
-                        </Form.Group>
-                        <Button id="form-button" variant="primary" type="submit">
-                            Submit <i class="fas fa-paper-plane"></i>
+            <Formik
+                initialValues={initialValues}
+                validationSchema={object({
+                    name: string().required("Please enter your name"),
+                    email: string().required("Please enter your email").email("Invalid email"),
+                    subject: string().required("Please enter a subject"),
+                    message: string().required("Please enter a message")
+                        .min(20, "Message should be minimum 20 characters long"),
+                })}
+
+                onSubmit={(values, formikHelpers) => {
+                    // api call to EmailJS
+                    send(
+                        'service_u3zbtht',
+                        'wubh2gi',
+                        values,
+                        '8ycExG0NQqJ39HJc4'
+                    )
+                    formikHelpers.resetForm();
+                }}
+
+            >
+                {({ errors, isValid, touched, dirty }) => (
+
+                    <Form>
+                        <div className="form-header">
+                        </div>
+                        <Field
+                            className="name-textbox"
+                            name="name"
+                            type="name"
+                            label="Name"
+                            as={TextField}
+                            color="primary"
+                            error={Boolean(errors.name) && Boolean(touched.name)}
+                            helperText={Boolean(touched.name) && errors.name}
+                            size="small"
+                            autoFocus
+                        />
+                        <Box height={14} />
+
+                        <Field
+                            className="email-textbox"
+                            name="email"
+                            type="email"
+                            label="Email"
+                            as={TextField}
+                            color="primary"
+                            error={Boolean(errors.email) && Boolean(touched.email)}
+                            helperText={Boolean(touched.email) && errors.email}
+                            size="small"
+                        />
+                        <Box height={14} />
+
+                        <Field
+                            className="subject-textbox"
+                            name="subject"
+                            type="subject"
+                            label="Subject"
+                            as={TextField}
+                            color="primary"
+                            error={Boolean(errors.subject) && Boolean(touched.subject)}
+                            helperText={Boolean(touched.subject) && errors.subject}
+                            size="small"
+                        />
+                        <Box height={14} />
+
+                        <Field
+                            className="message-textbox"
+                            name="message"
+                            type="message"
+                            label="Message"
+                            as={TextField}
+                            color="primary"
+                            error={Boolean(errors.message) && Boolean(touched.message)}
+                            helperText={Boolean(touched.message) && errors.message}
+                            size="small"
+                            multiline
+                            rows={6}
+                        />
+                        <Box height={14} />
+
+                        <Button type="submit"
+                            id="form-submit"
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            disabled={!isValid || !dirty}
+                            endIcon={<SendIcon />}>
+                            Send
                         </Button>
                     </Form>
-                </Card.Body>
-            </Card>
+                )}
+            </Formik>
+        </div>
         </div>
     );
 }
 export default Contact;
 
-{/* <form onSubmit={onSubmit}>
-                <input
-                    type='text'
-                    name='name'
-                    placeholder='Your name'
-                    value={toSend.name}
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    name='subject'
-                    placeholder='Subject'
-                    value={toSend.subject}
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    name='message'
-                    placeholder='Your message'
-                    value={toSend.message}
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    name='email'
-                    placeholder='Your email'
-                    value={toSend.email}
-                    onChange={handleChange}
-                />
-                <input type='submit'/>
-            </form> */}
 
 

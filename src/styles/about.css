@@ -1,0 +1,118 @@
+/*
+  ==============
+  ABOUT Styles
+  ============== 
+  */  
+
+.app-bar {
+    margin-top: 40px;
+    border: 3px solid white;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--clr-primary-1);
+    gap: 100px;
+  }
+
+  .pic-box {
+    height:fit-content;
+    margin-top: 50px;
+    margin-bottom: 180px;
+    border: 10px solid #2d87c8;
+    border-radius: 15px;
+  }
+
+.about-page-pic {
+    height: 450px;
+    width: 330px;
+    border: 8px solid white;
+  }
+
+.resume-button {
+    display: flex;
+    align-items: space-between;
+    width: 330px;
+    border: 5px solid white;
+    background-color: #2d87c8;
+  }
+
+  .bio-tab, .hobbies-tab, .soft-skills-tab, .interests-tab {
+    color: var(--clr-primary-1)
+  }
+
+.bio-card,
+.hobbies-card,
+.soft-skills-card,
+.interests-card {
+  margin-bottom: 100px;
+}
+
+
+.bio-card,
+.hobbies-card,
+.soft-skills-card,
+.interests-card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 10px solid #2d87c8;
+  border-radius: 20px;
+}
+
+.list-group-item {
+background-color: var(--clr-primary-1);
+color: #2d87c8;
+border: 5px solid white;
+font-size: 20px;
+font-weight: bolder;
+}
+
+.card-body{
+  background-color: var(--clr-primary-1);
+  border: 8px solid white;
+  border-radius: 10px;
+}
+
+.card-text {
+  color: #2d87c8;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+
+
+
+/*
+  ==============
+  ABOUT MEDIA QUERIES
+  ============== 
+  */  
+@media screen and (max-width: 1175px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .bio-card,
+  .hobbies-card,
+  .soft-skills-card,
+  .interests-card  {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .contact-form {
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+
+  .resume-button {
+    padding-bottom: 5px;
+  }
+
+}

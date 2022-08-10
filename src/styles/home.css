@@ -1,0 +1,134 @@
+/*
+  ==============
+  HOME Styles
+  ============== 
+  */
+
+
+  .home {
+    width: 100%;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    color: #3e497a;
+  }
+  
+  .intro {
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--clr-primary-1);
+    color: #f0f0f0;
+  }
+  
+  .intro h2 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    color: var(--clr-primary-5);
+    height: 50px;
+  }
+  
+  .intro .prompt {
+    width: 40%;
+    font-size: 30px;
+  }
+
+  .prompt {
+    margin-top: 50px;
+  }
+
+  .prompt svg {
+    font-size: 60px;
+    margin: 5px;
+    color: white;
+  }
+  
+  .skills {
+    font-size: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .skills h1 {
+    color: #3e497a;
+    font-size: 55px;
+  }
+
+  .skills h2 {
+    font-size: 40px;
+  }
+
+  .skills .list {
+    list-style: none;
+    width: 60%;
+  }
+  
+  
+  .list span {
+    font-size: 20px;
+  }
+
+  .list {
+    margin-bottom: 130px;
+  }
+
+  .item1, .item2 {
+    margin: 10px;
+  }
+  .item1 {
+    margin-bottom: 30px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .intro h2 {
+      font-size: 40px;
+    }
+  
+    .intro .prompt {
+      margin-top: 10px;
+      font-size: 20px;
+      width: 80%;
+    }
+  
+    .skills {
+      text-align: center;
+    }
+    .list {
+      padding: 0;
+    }
+  
+    .skills h2 {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width:800px) {
+
+    .intro h2 {
+    font-size: 50px;  }
+    .intro .prompt {
+        margin-top: 10px;
+        font-size: 20px;
+        width: 80%;
+      }
+    
+      .skills {
+        text-align: center;
+      }
+      .list {
+        padding: 0;
+      }
+    
+      .skills h2 {
+        font-size: 30px;
+      }
+}
+

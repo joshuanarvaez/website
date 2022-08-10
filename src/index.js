@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import About from './components/About';
 import Contact from './components/Contact';
-import Portfolio from './components/Portfolio';
+import Projects from './components/Projects';
 import { Home } from './components/Home';
-import { Footer } from './components/Footer';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,7 +21,7 @@ root.render(
       <Route path="/home" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="portfolio" element={<Portfolio />} />
+      <Route path="projects" element={<Projects />} />
     </Routes>
   </BrowserRouter>
 );

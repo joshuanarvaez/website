@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom"
-import logo1 from '../logo1.jpg';
+import logo from '../assets/logo.jpg';
+import '../styles/navbar.css'
 
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
         <nav>
             <div className="nav-center">
                 <div className="nav-header">
-                    <img src={logo1} classname="logo" alt="logo" />
+                    <img src={logo} className="logo" alt="logo" />
                     <button className="nav-toggle" onClick={toggleLinks}>
                         <FaBars />
                     </button>
@@ -38,7 +39,7 @@ const Navbar = () => {
                         <Link to="/home">Home</Link>
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/projects">Projects</Link>
                     </div>
                 </div>   
             </div>

@@ -1,0 +1,16 @@
+/*
+  ==============
+  FOOTER Styles
+  ============== 
+  */
+footer {
+  background-color: var(--clr-primary-4);
+  box-shadow: var(--light-shadow);
+  max-height: 80px;
+  position: sticky;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+}

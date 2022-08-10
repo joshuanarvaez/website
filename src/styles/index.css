@@ -43,6 +43,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -58,9 +59,8 @@ Global Styles
 }
 
 body {
-  font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--clr-primary-3);
-  color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -72,6 +72,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -81,38 +82,50 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-primary-4);
+  font-size: 18px;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -121,227 +134,25 @@ p {
   }
 }
 
-/* section */
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
 
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-/*
-=============== 
-Navbar Styles
-===============
-*/
-nav {
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
-}
-.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
 
-.nav-toggle {
-  font-size: 1.5rem;
-  color: var(--clr-primary-5);
-  background: transparent;
-  border-color: transparent;
-  transition: var(--transition);
-  cursor: pointer;
-}
-.nav-toggle:hover {
-  color: var(--clr-primary-1);
-  transform: rotate(90deg);
-}
-.logo {
-  height: 40px;
-}
-.links a {
-  color: var(--clr-grey-3);
-  font-size: 1rem;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  display: block;
-  padding: 0.5rem 1rem;
-  transition: var(--transition);
-}
-.links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding-left: 1.5rem;
-}
 
-.links-container {
-  height: 0;
-  overflow: hidden;
-  transition: var(--transition);
-}
-.show-container {
-  height: 10rem;
-}
 
-@media screen and (min-width: 800px) {
-  .nav-center {
-    max-width: 1170px;
-    max-height: 80px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .nav-header {
-    padding: 0;
-    max-height: 80px;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  /* Target links container again to override height from 0 to auto */
-  .links-container {
-    height: auto !important;
-  }
-  .links {
-    display: flex;
-  }
-  .links a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .links a:hover {
-    padding: 0;
-    background: transparent;
-  }
-  .social-icons {
-    display: flex;
-  }
-  .social-icons a {
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-  }
-  .social-icons a:hover {
-    color: var(--clr-primary-7);
-  }
 
-}
 
-  /*
-  ==============
-  FOOTER Styles
-  ============== 
-  */
-  footer {
-    background-color: var(--clr-primary-2);
-    box-shadow: var(--light-shadow);
-    max-height: 80px;
-  }
-   .icons {
-    display: flex;
-    flex-direction: row;
-   }
 
-  /*
-  ==============
-  HOME Styles
-  ============== 
-  */
-.home-page-pic {
-  max-height: 500px;
-  max-width: 400px;
-}
 
-.home-pic-card {
-  max-height: 500px;
-  max-width: 300px;
-}
-.intro-card {
-  display: flex;
-  max-height: 500px;
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
-}
-.home-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 30px;
-}
-@media screen and (max-width: 800px) {
-  .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 100px;
-  }
-  .intro-card {
-    font-size: smaller;
-  }
 
-}
+
+
+
+
+
+
+
+
 
 /*
-  ==============
-  ABOUT Styles
-  ============== 
-  */
-
-  .section-cards {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 50px;
-    margin: 20px 0 100px 0;
-    text-align: center;
-    color: var(--clr-primary-4);
-}
-
-  .cv-button {
-    margin-top: 20px;
-}
-@media screen and (max-width: 975px) {
-  .section-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-    
-}
-
-/*
-  ==============
-  CONTACT Styles
-  ============== 
-*/
-
-.contact-form {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 30px;
-
-}
-
-.mb-2 {
-  font-size: 30px;
-}
-
-
-
-
-   /*
   ==============
   PORTFOLIO Styles
   ============== 
@@ -350,6 +161,3 @@ nav {
 .h2test {
   color: orange;
 }
-
-
-

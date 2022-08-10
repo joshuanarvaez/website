@@ -36,7 +36,7 @@
 
 import React from 'react';
 import {MDBFooter, MDBIcon } from 'mdb-react-ui-kit';
-
+import '../styles/footer.css'
 const Footer = () => {
   return (<MDBFooter className='bg-light text-center text-white fixed-bottom'>
     <footer> 
@@ -88,9 +88,6 @@ const Footer = () => {
 }
 export default Footer;
 
-// Option 2, uncomment the following and import social from data.js
-
-{/* Pull social links array from data.js and map*/ }
 
 
 
