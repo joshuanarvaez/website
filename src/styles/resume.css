@@ -1,0 +1,53 @@
+.resume-container {
+    margin-bottom: 60px;
+}
+
+.inner-resume-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-button {
+    display: flex;
+    width: 240px;
+    border: 5px solid white;
+    background-color: #2d87c8;
+  }
+
+a   {
+    margin-bottom: 10px;
+  }
+
+.work-bullets li {
+    font-size: 18px;
+  }
+
+.project-heading, .courses-heading {
+    font-weight: bolder;
+}
+
+.work-education-heading, .company-name, .role-info, .school-name, .degree-info, .contact-info {
+    color: white;
+    font-weight: bolder;
+}
+
+
+.work-bullets {
+    list-style-type: disc;
+}
+
+
+.project-heading, .courses-heading {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.school-name {
+    margin-top: 10px;
+}
+
+.project-heading, .courses-heading {
+    font-weight: bolder;
+}
+
+

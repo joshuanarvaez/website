@@ -5,7 +5,7 @@ import { object, string } from "yup";
 import { TextField, Button, Box, Typography, } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import '../styles/contact.css'
-import ColorTheme from './ColorTheme'
+import ColorTheme from '../components/ColorTheme'
 
 
 const Contact = () => {

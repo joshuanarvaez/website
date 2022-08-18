@@ -1,0 +1,24 @@
+.experience-container {
+    background: linear-gradient(to right, #000428  , #004e92);
+    margin-bottom: 80px;
+
+}
+.vertical-timeline-header {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 20px;
+}
+
+.vertical-timeline-element-title , .vertical-timeline-element-subtitle {
+    color: var(--clr-primary-1)
+}
+
+h4 {
+    color: #2d87c8;
+}
+
+.vertical-timeline-element-date {
+    color: #fff;
+}

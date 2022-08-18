@@ -1,37 +1,3 @@
-// import React from 'react';
-// import { social } from "../data";
-// import { MDBFooter } from 'mdb-react-ui-kit';
-
-// const Footer = () => {
-//   return (
-//     < MDBFooter className='bg-light text-center text-white fixed-bottom'>
-//       <footer>
-//         <div className="social-links-container">
-//           <ul className="social-icons">
-//             {social.map((socialIcon) => {
-//               const { id, url, icon } = socialIcon
-//               return (
-//                 <li key={id}>
-//                   <a href={url}>{icon}</a>
-//                 </li>
-//               )
-//             })}
-//           </ul>
-//         </div>
-//         <div className='text-center p-1' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-//           © 2020 Copyright:
-//           <p className='text-white' href='https://mdbootstrap.com/'>
-//             MDBootstrap.com
-//           </p>
-//         </div>
-//       </footer>
-//     </MDBFooter>
-//   );
-// }
-// export default Footer;
-
-
-
 // ****** OPTION 2 ***********
 
 import React from 'react';

@@ -1,0 +1,48 @@
+.bio-column {width: 20%;}
+.hobbies-column {width: 14%;}
+.interests-column {width: 16%;}
+.soft-skills-column {width: 18%;}
+.front-end-column {width: 15%;}
+.back-end-column {width: 15%;}
+
+  .column-header {
+    font-weight: bolder;
+    color: #fff;
+  }
+
+  h5 , li {
+    color: #2d87c8;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 3px;
+  }
+
+  
+
+  /* MEDIA QUERIES TO RUN */
+
+  
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}

@@ -1,5 +1,6 @@
 {
   "name": "website",
+  "homepage": "/home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-swipeable-views": "^0.14.0",
+    "react-vertical-timeline-component": "^3.5.2",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
